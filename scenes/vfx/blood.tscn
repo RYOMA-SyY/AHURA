@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://djpd6edjcvydj"]
+
+[ext_resource type="Script" path="res://scripts/vfx/blood_effect.gd" id="1_0r7qe"]
+
+[node name="Blood" type="Node2D"]
+script = ExtResource("1_0r7qe")

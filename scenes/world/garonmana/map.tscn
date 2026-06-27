@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://cpoi0tv6e1iyx"]
+
+[ext_resource type="Texture2D" uid="uid://bhsacxr1oycqw" path="res://assets/sprites/environment/garonmana/tilemaps/bg wall full/sprite_0000.png" id="1_yq48h"]
+[ext_resource type="PackedScene" uid="uid://bqxhptprjn8l3" path="res://scenes/entities/player/player.tscn" id="2_u28xx"]
+[ext_resource type="PackedScene" uid="uid://cjxvndp8wvjyx" path="res://scenes/entities/enemies/bat.tscn" id="3_se1wi"]
+[ext_resource type="PackedScene" uid="uid://dtwmcptwxfvjv" path="res://scenes/entities/enemies/soulecho.tscn" id="3_vpcx8"]
+[ext_resource type="PackedScene" uid="uid://bkh0f6l2fhhk6" path="res://scenes/entities/enemies/night_borne.tscn" id="5_0in8q"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_yq48h"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u28xx"]
+size = Vector2(2865, 59)
+
+[node name="map" type="Node2D" unique_id=1092032546]
+
+[node name="Sprite0000" type="StaticBody2D" parent="." unique_id=1590687497]
+position = Vector2(375, 594)
+physics_material_override = SubResource("PhysicsMaterial_yq48h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite0000" unique_id=1222819677]
+position = Vector2(1063.5, -19.5)
+shape = SubResource("RectangleShape2D_u28xx")
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprite0000" unique_id=1010119261]
+position = Vector2(1058.5, 5)
+scale = Vector2(6.978049, 1)
+texture = ExtResource("1_yq48h")
+
+[node name="Player" parent="." unique_id=294144096 instance=ExtResource("2_u28xx")]
+position = Vector2(387, 502)
+
+[node name="SoulEcho" parent="." unique_id=972030650 instance=ExtResource("3_vpcx8")]
+position = Vector2(1249, 350)
+
+[node name="NightBorne" parent="." unique_id=1525778796 instance=ExtResource("5_0in8q")]
+position = Vector2(92, 481)
+
+[node name="Bat" parent="." unique_id=1133357572 instance=ExtResource("3_se1wi")]
+position = Vector2(1041, 451)
